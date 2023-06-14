@@ -5,7 +5,7 @@ import Image from 'next/image';
 //* Unfortunately, 'react-syntax-highlighter' code base is huge and will affect UX.
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 //! Import from 'cjs' and not 'esm' since this code must run on the server side
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import js from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
 import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
 
@@ -51,7 +51,7 @@ function PostContent(props) {
       //* className is something like language-js => We need the 'js' part here
       const language = className.split('-')[1];
 
-      return <SyntaxHighlighter style={atomDark} language={language} children={children} />;
+      return <SyntaxHighlighter style={materialLight} language={language} children={children} />;
     },
   };
 
